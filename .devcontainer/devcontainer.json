@@ -1,0 +1,30 @@
+{
+  "name": "vscode-devcontainer-jupyter-quarto-tikz",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "jupyter",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-toolsai.jupyter",
+        "ikuyadeu.r",
+        "quarto.quarto",
+        "james-yu.latex-workshop"
+      ],
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
+        "extensions": ["James-Yu.latex-workshop"],
+        "jupyter.jupyterServerType": "local",
+        "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)"
+      }
+    }
+  },
+  "workspaceFolder": "/workspace", 
+  "forwardPorts": [8888],
+  "remoteUser": "jovyan"
+}
