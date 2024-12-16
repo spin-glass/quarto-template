@@ -7,9 +7,12 @@ services:
       - GRANT_SUDO=yes
       - DOCKER_STACKS_JUPYTER_CMD=notebook
       - TZ=Asia/Tokyo
+      - NB_USER=jovyan
+      - NB_UID=1000
+      - NB_GID=100
     ports:
       - "8888:8888"
     volumes:
       - ../work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
-    user: root
+    user: jovyan

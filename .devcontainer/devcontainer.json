@@ -24,7 +24,7 @@
       }
     }
   },
-  "workspaceFolder": "/workspace", 
+  "workspaceFolder": "/home/jovyan/work",
   "forwardPorts": [8888],
-  "remoteUser": "jovyan"
+  // "remoteUser": "root"
 }
