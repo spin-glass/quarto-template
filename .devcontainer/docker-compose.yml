@@ -2,17 +2,9 @@ services:
   jupyter:
     build:
       context: .
-    image: jupyter-quarto-tikz:latest
-    environment:
-      - GRANT_SUDO=yes
-      - DOCKER_STACKS_JUPYTER_CMD=notebook
-      - TZ=Asia/Tokyo
-      - NB_USER=jovyan
-      - NB_UID=1000
-      - NB_GID=100
+    image: quarto:latest
     ports:
       - "8888:8888"
     volumes:
-      - ..:/home/jovyan/work
-    command: start-notebook.sh --NotebookApp.token=''
-    user: jovyan
+      - ..:/home/work
+    command: jupyterlab --NotebookApp.token=''

@@ -24,6 +24,7 @@
       }
     }
   },
-  "workspaceFolder": "/home/jovyan/work",
-  "forwardPorts": [8888]
+  "workspaceFolder": "/work",
+  "forwardPorts": [8888],
+  "postCreateCommand": ". /venv/bin/activate && pip install jupyterlab"
 }

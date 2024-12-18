@@ -1,11 +1,9 @@
-FROM quay.io/jupyter/datascience-notebook:latest
+FROM texlive/texlive:latest
 
 USER root
 
-RUN groupadd jovyan \
-    && usermod -g jovyan -a -G users jovyan
-
-# Grant sudo permission to jovyan user without password
-RUN echo "jovyan ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-USER jovyan
+RUN apt-get update && \
+    apt-get install -y locales \
+    fonts-ipaexfont \
+    imagemagick && \
+    rm -rf /var/lib/apt/lists/* /tmp/*.deb
