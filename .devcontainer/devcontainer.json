@@ -1,5 +1,5 @@
 {
-  "name": "vscode-devcontainer-jupyter-quarto-tikz",
+  "name": "quarto-tex",
   "dockerComposeFile": "./docker-compose.yml",
   "service": "jupyter",
   "features": {
@@ -24,7 +24,7 @@
       }
     }
   },
-  "workspaceFolder": "/work",
+  "workspaceFolder": "/workspace",
   "forwardPorts": [8888],
   "postCreateCommand": ". /venv/bin/activate && pip install jupyterlab"
 }

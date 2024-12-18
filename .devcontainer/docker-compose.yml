@@ -1,10 +1,10 @@
 services:
   jupyter:
     build:
-      context: .
-    image: quarto:latest
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
     ports:
       - "8888:8888"
     volumes:
-      - ..:/home/work
+      - ..:/workspace
     command: jupyterlab --NotebookApp.token=''
