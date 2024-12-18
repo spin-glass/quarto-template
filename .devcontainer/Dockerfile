@@ -5,4 +5,7 @@ USER root
 RUN groupadd jovyan \
     && usermod -g jovyan -a -G users jovyan
 
+# Grant sudo permission to jovyan user without password
+RUN echo "jovyan ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 USER jovyan
