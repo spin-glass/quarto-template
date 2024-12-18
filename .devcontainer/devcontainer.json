@@ -2,6 +2,7 @@
   "name": "quarto-tex",
   "dockerComposeFile": "./docker-compose.yml",
   "service": "jupyter",
+  "workspaceFolder": "/workspace",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
@@ -24,7 +25,5 @@
       }
     }
   },
-  "workspaceFolder": "/workspace",
-  "forwardPorts": [8888],
-  "postCreateCommand": ". /venv/bin/activate && pip install jupyterlab"
+  "forwardPorts": [8888]
 }
