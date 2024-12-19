@@ -35,3 +35,5 @@ RUN pip install --no-cache-dir pdm \
     && pdm sync
 
 ENV PATH="/workspace/__pypackages__/3.13/bin:${PATH}"
+
+# Todo: VSCode jupyterが利用できない、pdmを.venvにインストールする

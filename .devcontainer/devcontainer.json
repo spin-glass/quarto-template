@@ -4,7 +4,6 @@
   "service": "jupyter",
   "workspaceFolder": "/workspace",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
   },
   "customizations": {
