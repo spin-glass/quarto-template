@@ -24,7 +24,7 @@ ENV LC_ALL=ja_JP.UTF-8
 COPY --from=tex /usr/local/texlive /usr/local/texlive
 
 # TeXLive のバイナリパスを PATH に追加
-ENV PATH="/usr/local/texlive/2024/bin/aarch64-linux/:${PATH}"
+ENV PATH=$PATH:/usr/local/texlive/2024/bin/aarch64-linux/
 
 # 作業ディレクトリの設定
 WORKDIR /workspace
@@ -32,8 +32,7 @@ WORKDIR /workspace
 # Python の依存関係をインストール
 COPY pyproject.toml pdm.lock /workspace/
 RUN pip install --no-cache-dir pdm \
-    && pdm sync
+    && pdm config python.use_venv True \
+    && pdm sync --no-self --no-editable --prod
 
-ENV PATH="/workspace/__pypackages__/3.13/bin:${PATH}"
-
-# Todo: VSCode jupyterが利用できない、pdmを.venvにインストールする
+ENV PATH=/workspace/.venv/bin:$PATH
