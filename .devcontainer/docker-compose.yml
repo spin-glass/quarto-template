@@ -4,6 +4,8 @@ services:
       context: ..
       dockerfile: ./.devcontainer/Dockerfile
     restart: always
+    entrypoint: >
+      sleep infinity
     expose:
       - "8888"
     ports:
