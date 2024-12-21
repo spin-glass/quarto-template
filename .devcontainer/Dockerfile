@@ -23,6 +23,7 @@ COPY --from=tex /usr/local/texlive /usr/local/texlive
 
 # TeXLive のバイナリパスを PATH に追加
 ENV PATH=/usr/local/texlive/2024/bin/aarch64-linux:$PATH
+ENV PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 
 RUN apt-get -y purge texlive-base texlive-latex-base texlive-luatex texlive-lang-japanese && \
     rm -f /usr/bin/tlmgr
