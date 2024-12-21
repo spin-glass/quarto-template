@@ -15,7 +15,8 @@
         "ms-toolsai.jupyter",
         "ikuyadeu.r",
         "quarto.quarto",
-        "james-yu.latex-workshop"
+        "james-yu.latex-workshop",
+        "ms-azuretools.vscode-docker"
       ],
       "settings": {
         "python.pythonPath": "/usr/local/bin/python",
@@ -26,5 +27,5 @@
     }
   },
   "forwardPorts": [8888],
-  "postCreateCommand": "pdm sync --no-self --no-editable --prod && jupyter lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=''"
+  "postCreateCommand": "jupyter lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=''"
 }
