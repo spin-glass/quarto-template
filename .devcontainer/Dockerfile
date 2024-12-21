@@ -27,10 +27,9 @@ ENV PATH=$PATH:/usr/local/texlive/2024/bin/aarch64-linux/
 # 作業ディレクトリの設定
 WORKDIR /workspace
 
-# Python の依存関係をインストール
+# Pythonライブラリの依存関係をインストール
 COPY pyproject.toml pdm.lock /workspace/
 RUN pip install --no-cache-dir pdm \
-    && pdm config python.use_venv True \
-    && pdm sync --no-self --no-editable --prod
+    && pdm config python.use_venv True
 
 ENV PATH=/workspace/.venv/bin:$PATH
