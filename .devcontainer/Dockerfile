@@ -10,9 +10,7 @@ USER root
 # 必要なシステムパッケージをインストール
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        locales \
-        fonts-ipaexfont \
-        imagemagick && \
+        locales fonts-ipaexfont imagemagick procps && \
     rm -rf /var/lib/apt/lists/* /tmp/*.deb
 
 RUN locale-gen ja_JP.UTF-8 && localedef -f UTF-8 -i ja_JP ja_JP

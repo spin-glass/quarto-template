@@ -26,6 +26,5 @@
       }
     }
   },
-  "forwardPorts": [8888],
-  "postCreateCommand": "jupyter lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token=''"
+  "forwardPorts": [8888]
 }
