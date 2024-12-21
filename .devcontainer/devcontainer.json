@@ -21,9 +21,8 @@
       ],
       "settings": {
         "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
-        "extensions": ["James-Yu.latex-workshop"],
-        "jupyter.jupyterServerType": "local",
-        "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)"
+        "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
+        "jupyter.jupyterServerType": "local"
       }
     }
   },
