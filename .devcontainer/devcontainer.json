@@ -19,7 +19,7 @@
         "ms-azuretools.vscode-docker"
       ],
       "settings": {
-        "python.pythonPath": "/usr/local/bin/python",
+        "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
         "extensions": ["James-Yu.latex-workshop"],
         "jupyter.jupyterServerType": "local",
         "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)"
