@@ -32,7 +32,6 @@ WORKDIR /workspace
 # Python の依存関係をインストール
 COPY pyproject.toml pdm.lock /workspace/
 RUN pip install --no-cache-dir pdm \
-    && pdm config python.use_venv True \
-    && pdm sync --no-self --no-editable --prod
+    && pdm config python.use_venv True
 
 ENV PATH=/workspace/.venv/bin:$PATH
